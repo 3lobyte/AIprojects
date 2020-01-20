@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Image Classification with TensorflowJS!</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Small modal -->
+    <!-- The modal -->
+    <div class="modal fade" id="loadModel_modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall" aria-hidden="true"  data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            
+                <!--
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalLabelSmall">Small Shoes</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                -->
+
+                <div class="modal-body" id="modalLoad_body">
+                    <!-- Here we will append text -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="color_img_wrapper">
+                        <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+                    </div>
+
+                    <div class="card-body text-center predict_card_body">
+                        <h4 class="card-title">Image Recognition</h4>
+                        <p class="card-text"><p id="status">Your prediction will appear here!</p></p>
+                        <a href="javascript:void(0)" class="btn btn-primary" id="predictButton">PREDICT</a>
+                        <a href="javascript:void(0)" class="btn btn-success" id="retrainButton">RETRAIN</a>
+                    </div>
+
+                    <div class="card-body text-center retrain_card_body">
+                        <h4 class="card-title title_transfer">Transfer Learning</h4> 
+                        <p class="waves-effect waves-light add_class_button">Add Class</p>
+                        <p class="waves-effect waves-light retrain_button" id="retrain">Retrain</p>
+                        <div class="new_classes">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <i class="fa fa-info-circle" aria-hidden="true" id="let_info"></i>
+    <!-- Modal -->
+    <div class="modal fade" id="myModalHelp" role="dialog">
+        <div class="modal-dialog info_dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title info_title"> <b> Information </b> </h4>
+            </div>
+            <div class="modal-body">
+            	<p> Use your on-device camera to recognise objects using a pre-trained model. </p>
+            	<p> Take data and assign it a label to train a custom model and detect new objects. </p>
+            	<p> Built with <a href="https://js.tensorflow.org/" target="_blank"> Tensorflow.js </a> </p>
+            	<p> <i> Authors </i> </p>
+                <p>Juan Sensio <a href="https://github.com/JuanSensio" alt="juanGit" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+                <p>Mario Parreño <a href="https://github.com/MarioProjects" alt="marioGit" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-6">
+                <h4 class="text-center title_mode">Image Recognition</h4>
+                <div class="color_img_wrapper">
+                    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+                </div>
+                <p id="status" class="text-center">Your prediction will appear here!</p>
+                <div class="train_params" style="font-size: 15px;">
+                    Epochs <input type="text" value="1" class="param_input" id="param_epoch">
+                    Batch Size <input type="text" value="10" class="param_input" id="param_batch">
+                    Learning Rate <input type="text" value="0.01" class="param_input" style="width: 3.35rem;" id="param_lr">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 predict_card_body">
+                <select id="selector_model">
+                    <option value="0">Mobilenet</option>
+                </select> 
+                <a href="javascript:void(0)" class="btn btn-primary" id="predictButton" style="margin-top: 1.84rem;">PREDICT</a>
+                <a href="javascript:void(0)" class="btn btn-success" id="retrainButton" style="margin-top: 0.6rem;">RETRAIN</a>
+            </div>
+            <div class="col-sm-12 col-md-6 retrain_card_body">
+                <input type="text" id="new_model_name">
+                <a class="add_class_button btn">Add Class</a>
+                <div class="new_classes"  style="margin-top: 1.4rem;"></div>
+
+                <a class="btn retrain_button" id="retrain"  style="margin-top: 1.4rem;">Train</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Tensorflow -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.9.0"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/webcam.js"></script>
+    <script type="text/javascript" src="js/mobilenet.js"></script>
+    <script type="text/javascript" src="js/imagenet_classes.js"></script>
+    <script type="text/javascript" src="js/retrain.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

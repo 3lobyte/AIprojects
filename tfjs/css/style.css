@@ -1,0 +1,247 @@
+/* Extra small devices (portrait phones, less than 576px)
+ No media query since this is the default in Bootstrap */
+
+ /* GENERAL STYLES */
+ body,html{
+    height:100%;
+}
+
+
+.color_img_wrapper {
+    z-index: 50;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.info_dialog{
+    width: 70%;
+}
+.info_title{
+    font-size: 2rem;
+}
+
+#let_info{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2.5rem;
+    color: #aaa;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+#let_info:hover{
+    color: #666;
+}
+
+#webcam{
+    width: 300px;
+    height: 300px;
+}
+
+.color_img_wrapper:after {
+    content: '';
+    display: block;
+    padding-top: 0;
+}
+
+
+/* CENTER MODALS */
+.modal {
+    text-align: center;
+    padding: 0!important;
+    font-size: 1.56rem;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#myFileInput{
+    position: absolute;
+    top: -99999999999rem;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* LOADER */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #aaa;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+} 
+
+#predictButton, #retrainButton, .add_class_button, .retrain_button{
+    width: 80%;
+    height: 4rem;
+    margin-left: 10%;
+    font-size: 1.52rem;
+}
+
+#new_model_name{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 1.77rem;
+    height: 2.45rem;
+    font-size: 1.52rem;
+    border: dotted;
+}
+
+.retrain_card_body{
+    display: none;
+    margin-top: 2rem;
+}
+
+.retrain_button{
+    background: #FC4A1A;
+    color: white;
+}
+
+.add_class_button{
+    background: #4ABDAC;
+    color: white;
+}
+
+.new_classes{
+    background: rgba(136, 136, 136, 0.16);
+    padding: 1rem;
+    overflow: scroll;
+    height: 13.5rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.new_class_input{
+    float: left;
+    background: transparent;
+    border: 1px solid #999;
+    color: #241B3D;
+    padding: 0.35rem;
+    width: 42.5%;
+    margin-right: 2.5%;
+    font-size: 1rem;
+}
+
+.take_data_class_btn{
+    padding: 0.4rem 1.25rem 0.4rem 1.25rem;
+    background: #241B3D;
+    color: white;
+    width: 55%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+#status{
+    font-size: 1.52rem;
+}
+
+.train_params{
+    display: none;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.param_input{
+    width: 3rem;
+    padding: 0rem 0rem 0rem 0.3rem;
+    font-size: 1.15rem;
+    margin-right: 0.43rem;
+}
+
+.title_mode{
+    font-size: 1.75rem;
+}
+
+/* ESTILOS SELECTOR DE MODELOS */
+#selector_model{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+
+option{
+    font-size: 1.7rem;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+     .color_img_wrapper {
+        z-index: 50;
+        border-radius: 10px 10px 0 0;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+    
+    #webcam{
+        min-width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        width: 448px;
+        height: 448px;
+    }
+
+    .retrain_card_body{
+        margin-top: 0rem;
+    }
+
+    .new_class_input{
+        float: left;
+        background: transparent;
+        border: 1px solid #999;
+        color: #241B3D;
+        padding: 0.55rem;
+        width: 52.5%;
+        margin-right: 2.5%;
+        font-size: 1.1rem;
+    }
+    
+    .take_data_class_btn{
+        padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+        background: #241B3D;
+        color: white;
+        width: 45%;
+        font-size: 1.24rem;
+        text-align: center;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
