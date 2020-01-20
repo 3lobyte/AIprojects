@@ -10,6 +10,7 @@ This is a list of my projects on Artificial Intelligence.
 
 ## Education
 
+- My solutions to [Kaggle](https://github.com/juansensio/AIprojects/tree/master/kaggle) competitions.
 - Learn how to train an object detection model with a dataset from [POINTOUT](https://github.com/juansensio/AIprojects/tree/master/pointout).
 
 ## Frameworks
