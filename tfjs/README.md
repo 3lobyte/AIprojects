@@ -2,7 +2,7 @@
 
 Web application for real-time image classification using on-device camera with tensorflow.js
 
-https://juansensio.github.io/tfjs/
+https://juansensio.github.io/AIprojects/tfjs/index.html
 
 ## Authors
 
