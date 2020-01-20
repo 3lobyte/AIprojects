@@ -108,12 +108,10 @@ class Model():
     mb = master_bar(range(0, 1))
     for e in mb:
         preds = torch.tensor([]).to(self.device)
-        #preds = []
         with torch.no_grad():
             for X in progress_bar(dataloader, parent=mb):
                 output = torch.nn.Softmax(dim=1)(self.net(X.to(self.device)))
                 preds = torch.cat((preds, output))
-                #preds.append(self.net(X.to(self.device)))
     return preds
 
   def evaluate(self, X_test, y_test, batch_size=32, trans=None):
