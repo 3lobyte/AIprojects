@@ -23,7 +23,7 @@ with Keras.
 ## Artificial Intelligence
 
 - [PyNego](https://github.com/JuanSensio/AIprojects/tree/master/old/AI/PyNego) a bilateral automatic negotiation environment implemented in Python.
-- [NegoJS](https://juansensio.github.io/negoJS/) a multi-agent automatic negotiation environment.
+- [NegoJS](https://juansensio.github.io/AIprojects/negoJS/index.html) a multi-agent automatic negotiation environment.
 
 ## Biometrics
 
