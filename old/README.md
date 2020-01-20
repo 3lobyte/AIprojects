@@ -5,7 +5,7 @@ Almost every project is done with Python, some simple implementations with numpy
 ## Machine Learning
 
 - A simple single-layer [Perceptron](https://github.com/JuanSensio/AIprojects/blob/master/old/ML/perceptron/perceptron.ipynb) for classification with custom data.
-- A single-layer feed-forward [Neural Network](https://github.com/JuanSensio/AIprojects/blob/master/ML/old/nn/nn.py) with activation function and backpropagation implemented in Python.
+- A single-layer feed-forward [Neural Network](https://github.com/JuanSensio/AIprojects/blob/master/old/ML/nn/nn.py) with activation function and backpropagation implemented in Python.
 - A [multilayer preceptron](https://github.com/JuanSensio/AIprojects/blob/master/old/ML/mnist) for MNIST dataset classification
 with Keras. 
 - A CNN for [traffic signs](https://github.com/JuanSensio/AIprojects/blob/master/old/ML/traffic/trafficSigns.ipynb) recognition with Keras.
