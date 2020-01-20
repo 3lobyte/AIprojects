@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NegoJS</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="css/styles.css" rel="stylesheet">
+
+        <!-- CHARTS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <!-- SELECTS -->
+        <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
+    </head>
+    <body>
+
+        <div class="sidenav">
+            <div class="sidenav_head">
+                NegoJS Dashboard
+            </div>
+            <div class="dashboard_operations">
+                <div class="add_agent waves-effect waves-light"><i class="fa fa-plus" aria-hidden="true"></i> Add Agent</div>
+            </div>
+            <div class="agent_list">
+            </div>
+            <div class="simulation_operations">
+                <div class="play_simulation"><i class="fa fa-play" aria-hidden="true"></i> Play Simulation</div>
+                <div class="stop_simulation" style="display:none;"><i class="fa fa-stop" aria-hidden="true"></i> Stop Simulation</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container prev_simulation">
+                <div class="row">
+                    <div class="col-sm-11">
+                        <h1>404*</h1>
+                        <h2>Simulation not found!</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/error-monster.png" id="errorMonster">
+                </div>
+            </div>
+            <div class="container simulation_stats"  style="display:none;">
+<!--                 <h3>Negotiation Evolution</h3>
+ -->                
+            </div>
+            <div id="stats" style="margin-left: 50px;padding-top: 10px;"> time: 0 s   Iteration: 0 </div>
+            <div class="tabla" style="width: 500px; margin-left:50px;padding-top: 10px;"> </div>
+        </div>
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/min/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/min/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/min/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/min/mdb.min.js"></script>
+        <!-- CHARTS -->
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+        <!-- SELECTS -->
+        <script src="js/min/classie.js"></script>
+		<script src="js/min/selectFx.js"></script>
+        <!-- CUSTOM -->
+        <script type="text/javascript" src="js/ui.js"></script>
+        <script type="text/javascript" src="js/chart.js"></script>
+        <script type="text/javascript" src="js/torneo.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/agents.js"></script>
+    </body>
+</html> 

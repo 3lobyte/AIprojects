@@ -1,0 +1,92 @@
+{
+    "price": {
+        "type": "range",
+        "range": [5000, 40000],
+        "w": 0.4,
+        "V": [
+            [0.1, 30000, 40000],
+            [0.2, 25000, 30000],
+            [0.3, 20000, 25000],
+            [0.4, 18000, 20000],
+            [0.5, 16000, 18000],
+            [0.6, 14000, 16000],
+            [0.7, 12000, 14000],
+            [0.8, 10000, 12000],
+            [0.9, 8000, 10000],            
+            [1, 5000, 8000]
+        ]
+    },
+    "color": {
+        "type": "list",
+        "list": ["blue","red","green","yellow","grey","black","white"],
+        "w": 0.1,
+        "V": [
+            [0.8, "blue"],
+            [0.5, "green"],
+            [0.2, "red"],
+            [0.8, "yellow"],
+            [0.1, "grey"],
+            [0.1, "black"],
+            [0.6, "white"]
+        ]
+    },
+    "shape": {
+       "type": "list",
+       "list": ["berlina","sport","mono","SUV"],
+       "w": 0.05,
+        "V": [
+            [0.3, "berlina"],
+            [1, "sport"],
+            [0.5, "mono"],
+            [0.8, "SUV"]
+        ]
+    },
+    "finishing": {
+        "type": "list",
+        "list": ["cheap","medium","luxury"],
+        "w": 0.05,
+        "V": [
+            [0.3, "cheap"],
+            [0.5, "medium"],
+            [1, "luxury"]
+        ]
+    },
+    "abs": {
+        "type": "list",
+        "list": ["yes"],
+        "w": 0.1,
+        "V": [
+            [0, "no"],
+            [1, "yes"]
+        ]
+    },
+    "resell": {
+        "type": "list",
+        "list": ["bad","good","verGood"],
+        "w": 0.1,
+        "V": [
+            [0.1, "bad"],
+            [0.5, "good"],
+            [1.0, "veryGood"]
+        ]
+    },   
+    "maintenance": {
+        "type": "list",
+        "list": ["cheap","medium","expensive"],
+        "w": 0.1,
+        "V": [
+            [1.0, "cheap"],
+            [0.5, "medium"],
+            [0.2, "expensive"]
+        ]
+    },
+    "available": {
+        "type": "list",
+        "list": ["yes","no"],
+        "w": 0.1,
+        "V": [
+            [0.8, "yes"],
+            [0.5, "no"]
+        ]
+    }      
+}
