@@ -1,0 +1,18 @@
+{
+  "name": "land-use-onnx-serverless-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "onnxjs": "^0.1.6",
+    "ndarray": "^1.0.18",
+    "ndarray-ops": "^1.2.2",
+    "micro": "^9.3.4",
+    "minio": "^7.0.8",
+    "content-type": "^1.0.4",
+    "jimp": "^0.6.4"
+  }
+}

@@ -1,0 +1,39 @@
+FROM pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-runtime 
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    wget \
+    unzip \
+    libgl1-mesa-glx \
+    && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN conda install -c conda-forge opencv -yy
+
+RUN pip --no-cache-dir install \
+    --upgrade pip \
+    torchvision \
+    ipykernel \
+    jupyter \
+    numpy \
+    matplotlib \
+    pandas \
+    scikit-image \
+    sklearn \
+    albumentations \
+    onnx \
+    jupyter_contrib_nbextensions
+
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextension enable codefolding/main
+RUN jupyter nbextension enable collapsible_headings/main
+RUN jupyter nbextension enable scroll_down/main
+RUN jupyter nbextension enable execute_time/ExecuteTime
+RUN jupyter nbextension enable livemdpreview/livemdpreview
+RUN jupyter nbextension enable freeze/main
+RUN jupyter nbextension enable spellchecker/main
+RUN jupyter nbextension enable tree-filter/index
+
+HEALTHCHECK CMD curl --fail http://localhost:8888/ || exit 1    

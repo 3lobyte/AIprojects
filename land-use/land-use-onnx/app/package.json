@@ -1,0 +1,21 @@
+{
+  "name": "land-use-onnx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build" 
+  },
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",    
+    "leaflet": "^1.4.0",
+    "leaflet-image": "^0.4.0",
+    "leaflet-control-geocoder": "^1.6.0"
+  }
+}
