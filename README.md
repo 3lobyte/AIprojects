@@ -6,7 +6,7 @@ This is a list of my projects on Artificial Intelligence.
 ## Applications
 
 - Web [application](https://juansensio.github.io/AIprojects/tfjs/index.html) for real-time image classification using on-device camera with tensorflow.js
-- Land Use [APPs](https://juansensio.github.io/AIprojects/land-use) for classification of satellite imagery.
+- Land Use [APPs](https://github.com/juansensio/AIprojects/tree/master/land-use) for classification of satellite imagery.
 
 ## Education
 
